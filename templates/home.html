@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to the Bank Application!</h1>
+    <p>Please choose an option:</p>
+    <ul>
+        <li><a href="{{ url_for('open_account') }}">Open Account</a></li>
+        <li><a href="{{ url_for('deposit_amount') }}">Deposit Amount</a></li>
+        <li><a href="{{ url_for('withdraw_amount') }}">Withdraw Amount</a></li>
+        <li><a href="{{ url_for('balance_enquiry') }}">Balance Enquiry</a></li>
+        <li><a href="{{ url_for('list_accounts') }}">List Accounts</a></li>
+    </ul>
+{% endblock %}

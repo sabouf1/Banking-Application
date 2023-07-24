@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="mt-5 mb-4">Balance Enquiry</h1>
+    {% if balance is not none %}
+        <p>Account Number: {{ account_number }}</p>
+        <p>Balance: {{ balance }}</p>
+    {% else %}
+        <p>No balance information found for the provided account number.</p>
+    {% endif %}
+    <form method="POST" action="/balance_enquiry">
+        <div class="mb-3">
+            <label for="account_number" class="form-label">Account Number</label>
+            <input type="text" class="form-control" id="account_number" name="account_number" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Balance</button>
+    </form>
+{% endblock %}
