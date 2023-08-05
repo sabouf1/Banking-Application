@@ -8,10 +8,10 @@ app.secret_key = 'your_secret_key'  # Set your secret key for session management
 def connect_to_database():
     try:
         db = mysql.connector.connect(
-            host='your host',
-            user='dababase username',
-            password='user password',
-            database='database name'
+            host='127.0.0.1',
+            user='root',
+            password='EL#u9yzOewh+69',
+            database='bank'
         )
         return db
     except mysql.connector.Error as error:
